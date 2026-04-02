@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+html {
+  overflow-x: clip;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  overflow-x: clip;
+}
+
+#root {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  text-align: initial;
+  border: none;
+  min-height: 100svh;
+}
+
+.untold-main-offset {
+  padding-top: 80px;
+}
+
+.untold-section-py {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+@media (max-width: 991px) {
+  .untold-section-py {
+    padding-top: 72px;
+    padding-bottom: 72px;
+  }
+}
+
+.untold-nav-link.active {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.untold-header .untold-hamburger {
+  font-size: 1.25rem;
+  line-height: 1;
+  text-decoration: none;
+}
+
+@media (max-width: 991.98px) {
+  .untold-mobile-nav {
+    margin-left: -1rem;
+    margin-right: -1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media (max-width: 991.98px) and (min-width: 576px) {
+  .untold-mobile-nav {
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .untold-mobile-nav {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.untold-hero-img {
+  max-width: none;
+}
+
+.untold-hero-copy {
+  bottom: 24px;
+}
+
+@media (max-width: 991.98px) {
+  .untold-hero-lead {
+    font-size: 16px !important;
+    line-height: 24px !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .untold-hero-copy {
+    bottom: 56px;
+    padding-left: 48px !important;
+  }
+}
+
+.untold-category-card:hover .untold-category-img {
+  transform: scale(1.02);
+  transition: transform 0.35s ease;
+}
+
+.untold-category-img {
+  transition: transform 0.35s ease;
+}
+
+@media (min-width: 992px) {
+  .untold-category-card {
+    min-height: min(70vw, 576px);
+  }
+}
+
+/* Shop listing: equal-width columns (avoids first column looking narrower than siblings). */
+.untold-product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .untold-product-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 992px) {
+  .untold-product-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.untold-product-hover-cta {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.untold-product-visual:hover .untold-product-hover-cta {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.untold-footer-input::placeholder {
+  color: #737373;
+  opacity: 1;
+}
+
+/* Category / product media heights: compact below lg, match Figma at lg+ */
+@media (max-width: 991.98px) {
+  .untold-category-media {
+    height: min(72vw, 420px);
+  }
+
+  .untold-product-media-height {
+    height: min(58vw, 320px);
+  }
+
+  .untold-pdp-main-visual,
+  .untold-pdp-main-visual img {
+    min-height: 300px;
+  }
+}
+
+@media (min-width: 992px) {
+  .untold-category-media {
+    height: 576px;
+  }
+
+  .untold-product-media-height {
+    height: 424px;
+  }
+
+  .untold-pdp-main-visual,
+  .untold-pdp-main-visual img {
+    min-height: 420px;
+  }
+}

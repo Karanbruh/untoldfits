@@ -1,0 +1,20 @@
+/** Figma MCP asset URLs (valid ~7 days from export). Replace with local /public assets for production. */
+export const ASSETS = {
+  hero: 'https://www.figma.com/api/mcp/asset/8d6f3975-cdc8-4cd8-9d91-37079072fad0',
+  jackets: 'https://www.figma.com/api/mcp/asset/4e8d4716-9413-4560-b056-d4abc94e4013',
+  hoodies: 'https://www.figma.com/api/mcp/asset/317f1eb7-ede1-4058-833e-2f8d4f4df615',
+  tShirts: 'https://www.figma.com/api/mcp/asset/06122fdd-60db-4e54-b5e9-d9117252f8b6',
+  trackpants: 'https://www.figma.com/api/mcp/asset/3f3a7b0d-8083-4566-bdfc-5f93476aa163',
+  tankTops: 'https://www.figma.com/api/mcp/asset/289b88e1-33f1-4351-9168-315c8f573abc',
+  cropTops: 'https://www.figma.com/api/mcp/asset/13850a4a-5c37-45ab-9c1c-4baacde2206a',
+  technicalShellJacket: 'https://www.figma.com/api/mcp/asset/9e4a3fbc-6fad-4519-9fbc-29cad19efb04',
+  heavyweightCoreHoodie: 'https://www.figma.com/api/mcp/asset/ec9bbabb-1f5d-4482-85ee-c76a006ee38e',
+  nylonCargoTrackpants: 'https://www.figma.com/api/mcp/asset/8c8cc4a8-43de-493a-bb16-2814b22e1583',
+  essentialBoxyTee: 'https://www.figma.com/api/mcp/asset/3d3a3b0e-e919-4a2e-ae18-0efc1b4a0d28',
+  iconSocial1: 'https://www.figma.com/api/mcp/asset/f74d1b30-70a2-4f63-b08b-e37ebaba485f',
+  iconSocial2: 'https://www.figma.com/api/mcp/asset/fa409b91-1296-42dc-8ff8-f09881093ce4',
+  iconSocial3: 'https://www.figma.com/api/mcp/asset/4137ccca-9617-43e9-bfb6-ebbb0e4d4384',
+  iconSearch: 'https://www.figma.com/api/mcp/asset/61f3e9d8-72f5-44f0-868a-25ee4f313612',
+  iconUser: 'https://www.figma.com/api/mcp/asset/b278fbcc-806c-4b78-a3c7-37c460cdc1cb',
+  iconCart: 'https://www.figma.com/api/mcp/asset/02c6d6a1-7209-4752-8374-b3719c9dd8ef',
+}
