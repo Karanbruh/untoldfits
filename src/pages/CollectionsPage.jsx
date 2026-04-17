@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
-import { featuredCategories } from '@/data/categories'
-import CategoryCard from '@/components/home/CategoryCard'
+import { collectionShowcase } from '@/data/collections'
+import CollectionShowcaseCard from '@/components/collections/CollectionShowcaseCard'
 import { COLORS } from '@/constants/theme'
 
 export default function CollectionsPage() {
@@ -10,18 +10,24 @@ export default function CollectionsPage() {
         Collections
       </h1>
       <p className="text-muted mb-5" style={{ maxWidth: '560px' }}>
-        Seasonal edits and curated drops. Start from a category or{' '}
+        Seasonal edits and curated drops. Start from a collection or{' '}
         <Link to="/products" className="text-dark">
           view all products
         </Link>
         .
       </p>
       <div className="row g-4">
-        {featuredCategories.map((cat) => (
-          <div key={cat.slug} className="col-12 col-md-6 col-lg-4">
-            <CategoryCard slug={cat.slug} title={cat.title} image={cat.image} />
-          </div>
-        ))}
+        {collectionShowcase.map((item) => {
+          const exploreTo =
+            item.mode === 'shop' && item.shopSlug
+              ? `/category/${encodeURIComponent(item.shopSlug)}`
+              : `/collections/unavailable/${encodeURIComponent(item.slug)}`
+          return (
+            <div key={item.slug} className="col-12 col-md-6 col-lg-4">
+              <CollectionShowcaseCard title={item.title} image={item.image} exploreTo={exploreTo} />
+            </div>
+          )
+        })}
       </div>
     </div>
   )

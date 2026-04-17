@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { COLORS } from '@/constants/theme'
 import { getProductById } from '@/data/products'
+import ProductPriceBlock from '@/components/product/ProductPriceBlock'
 import { useCart } from '@/features/cart/CartContext'
 
 export default function ProductPage() {
@@ -79,7 +80,9 @@ export default function ProductPage() {
           <h1 className="h3 fw-normal mb-2" style={{ color: COLORS.ink }}>
             {product.name}
           </h1>
-          <p className="fs-5 mb-4">{product.priceDisplay}</p>
+          <div className="mb-4">
+            <ProductPriceBlock product={product} />
+          </div>
           <p className="text-muted mb-4" style={{ fontSize: '15px', lineHeight: '24px' }}>
             {product.description}
           </p>

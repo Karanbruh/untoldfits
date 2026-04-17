@@ -10,12 +10,9 @@ const sectionTitle = {
 }
 
 const labels = {
-  jackets: 'Jackets',
-  hoodies: 'Hoodies',
-  't-shirts': 'T-Shirts',
-  trackpants: 'Trackpants',
-  'tank-tops': 'Tank Tops',
+  henleys: 'Henleys',
   'crop-tops': 'Crop Tops',
+  'leather-jackets': 'Leather jackets',
 }
 
 function toggleArray(arr, val) {

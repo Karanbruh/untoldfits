@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
-import { ASSETS } from '@/constants/figmaAssets'
+import { BsCart3, BsPerson, BsSearch } from 'react-icons/bs'
 import { BRAND } from '@/constants/theme'
 import { useCart } from '@/features/cart/CartContext'
 
@@ -81,13 +81,13 @@ export default function SiteHeader({ onOpenSearch }) {
                 aria-label="Search"
                 onClick={onOpenSearch}
               >
-                <img src={ASSETS.iconSearch} alt="" width={20} height={20} />
+                <BsSearch size={20} className="text-dark" aria-hidden />
               </button>
               <Link to="/account" className="btn btn-link p-2" aria-label="Account">
-                <img src={ASSETS.iconUser} alt="" width={20} height={20} />
+                <BsPerson size={20} className="text-dark" aria-hidden />
               </Link>
               <Link to="/cart" className="btn btn-link p-2 position-relative" aria-label="Cart">
-                <img src={ASSETS.iconCart} alt="" width={20} height={20} />
+                <BsCart3 size={20} className="text-dark" aria-hidden />
                 {totalQuantity > 0 && (
                   <span
                     className="position-absolute top-0 end-0 translate-middle badge rounded-pill bg-dark text-white d-flex align-items-center justify-content-center"
@@ -112,10 +112,10 @@ export default function SiteHeader({ onOpenSearch }) {
               aria-label="Search"
               onClick={onOpenSearch}
             >
-              <img src={ASSETS.iconSearch} alt="" width={20} height={20} />
+              <BsSearch size={20} className="text-dark" aria-hidden />
             </button>
             <Link to="/cart" className="btn btn-link p-2 position-relative" aria-label="Cart">
-              <img src={ASSETS.iconCart} alt="" width={20} height={20} />
+              <BsCart3 size={20} className="text-dark" aria-hidden />
               {totalQuantity > 0 && (
                 <span
                   className="position-absolute top-0 end-0 translate-middle badge rounded-pill bg-dark text-white"

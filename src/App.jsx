@@ -6,6 +6,7 @@ import ShopPage from '@/pages/ShopPage'
 import ProductsPage from '@/pages/ProductsPage'
 import CategoryPage from '@/pages/CategoryPage'
 import CollectionsPage from '@/pages/CollectionsPage'
+import CollectionUnavailablePage from '@/pages/CollectionUnavailablePage'
 import EditorialPage from '@/pages/EditorialPage'
 import CartPage from '@/pages/CartPage'
 import ProductPage from '@/pages/ProductPage'
@@ -25,6 +26,7 @@ export default function App() {
             <Route path="products" element={<ProductsPage />} />
             <Route path="shop" element={<ShopPage />} />
             <Route path="category/:slug" element={<CategoryPage />} />
+            <Route path="collections/unavailable/:slug" element={<CollectionUnavailablePage />} />
             <Route path="collections" element={<CollectionsPage />} />
             <Route path="editorial" element={<EditorialPage />} />
             <Route path="cart" element={<CartPage />} />

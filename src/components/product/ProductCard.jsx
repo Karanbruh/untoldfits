@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom'
 import { COLORS } from '@/constants/theme'
+import ProductPriceBlock from '@/components/product/ProductPriceBlock'
 
 /** @param {{ product: import('@/data/products').Product & { image?: string, price?: string, swatches?: string[] } }} props */
 export default function ProductCard({ product }) {
   const image = product.image ?? product.images?.[0]
-  const price = product.price ?? product.priceDisplay
   const swatches = product.swatches ?? product.colors?.map((c) => c.hex) ?? []
 
   return (
@@ -66,9 +66,9 @@ export default function ProductCard({ product }) {
           >
             {product.name}
           </Link>
-          <span className="text-dark flex-shrink-0" style={{ fontSize: '15px' }}>
-            {price}
-          </span>
+          <div className="flex-shrink-0" style={{ minWidth: 'fit-content' }}>
+            <ProductPriceBlock product={product} compact />
+          </div>
         </div>
         <p className="mb-0" style={{ color: COLORS.muted, fontSize: '14px', lineHeight: '21px' }}>
           {product.categoryLabel}

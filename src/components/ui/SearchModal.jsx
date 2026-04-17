@@ -85,7 +85,18 @@ export default function SearchModal({ show, onHide }) {
                       <div className="fw-medium" style={{ fontSize: '15px' }}>
                         {p.name}
                       </div>
-                      <div className="small text-muted">{p.priceDisplay}</div>
+                      <div className="small">
+                        {p.compareAtPriceDisplay && p.compareAtPriceCents > p.priceCents ? (
+                          <>
+                            <span className="text-muted text-decoration-line-through me-1">
+                              {p.compareAtPriceDisplay}
+                            </span>
+                            <span className="text-dark fw-medium">{p.priceDisplay}</span>
+                          </>
+                        ) : (
+                          <span className="text-muted">{p.priceDisplay}</span>
+                        )}
+                      </div>
                     </div>
                   </Link>
                 </li>
